@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="/static/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Caveat&family=Kalam:wght@700&family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3e7e1fbcaa.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<!------------------------------------------------------------HEADER---------------------------------------------------------->
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="/static/images/image2.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="{% url 'home' %}">HOME</a></li>
+                <li><a href="{% url 'gallery' %}">GALLERY</a></li>
+                <li><a href="{% url 'about' %}">ABOUT ME</a></li>
+                <li><a href="{% url 'contact' %}">CONTACT</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Electronics & Communication Engineer</p>
+            <h1>Hi, I'm <span>Amit Kumar Roy</span><br>From Kolkata, West Bengal</h1>
+        </div>
+    </div>
+</div>
+
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Enhance customer experience with creative and professional web design</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-photo-film"></i>
+                <h2>Photo Editing</h2>
+                <p>We our unique and creative designing services to impress our potential customer</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-video"></i>
+                <h2>Video Editing</h2>
+                <p>We serve you with best and qualty works at a very low price</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="/static/images/image4.jpg">
+                <div class="layer">
+                    <h3>Room light control</h3>
+                    <p>Employed Arduino and C language for detailed evaluation of 4 Channel Relay & Bluetooth Module in terms of controlling Room light</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+                </div>
+            </div>
+            <div class="work">
+                <img src="/static/images/image5.jpg">
+                <div class="layer">
+                <h3>Smart Helmet</h3>
+                <p>This Helmet is designed to Detect the Alcohol Level of two wheeler riders and detect accidents also bringing in help.</p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            </div>
+            <div class="work">
+                <img src="/static/images/image6.jpg">
+                <div class="layer">
+                <h3>Frontend Web Design</h3>
+                <p>Detailed evaluation of HTML, CSS, React, Javascript & for deployement Vercel CLI.</p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+
+<div class="copyright">
+    <p>Copyright © Amit 2023. All Rights Reserved</p>
+</div>
+
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0"
+
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px"
+        
+    }
+
+</script>
+
+</body>
+</html>

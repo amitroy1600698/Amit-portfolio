@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="/static/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Caveat&family=Kalam:wght@700&family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3e7e1fbcaa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header1">
+    <div class="container">
+        <nav>
+            <img src="/static/images/image2.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="{% url 'home' %}">HOME</a></li>
+                <li><a href="{% url 'gallery' %}">GALLERY</a></li>
+                <li><a href="{% url 'about' %}">ABOUT ME</a></li>
+                <li><a href="{% url 'contact' %}">CONTACT</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/static/images/image3.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am an enthusiastic, self-motivated, reliable, responsible and hard working person and currently pursuing my final year Bachelor's degree in Electronics Engineering from West bengal University of Technology. Before that I have completed Diploma engineering in Electronics & Tele-communication from West Bengal State Council of Technical & Vocational Education and Skill Development. My hobbies are Video editing, Gaming, traveling and riding. In my spare time, I enjoy exploring Web development and building projects frontend and backend. My goal is to work efficiently and effectively as well as grow with a prestigious organization in the field of Information Technology so as to achieve self-realization and the accomplishment of organizational goals. I am also looking for an entry level position to kick start my career and utilize my skills and expand my knowledge.
+                    </p>
+    
+                        <div class="tab-title">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Python</span><br>Advance programing in python</li>
+                                <li><span>Cloud Computing</span><br>AWS, SQL, MySQL</li>
+                                <li><span>Machine Learning</span><br>Intermediate</li>
+                                <li><span>Web Development</span><br>HTML, CSS, Javascript, Django, reactJs</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2020-2023</span><br>Bachelor of Engineering with 85%</li>
+                                <li><span>2017-2020</span><br>Diploma Engineering with 75%</li>
+                                <li><span>2016</span><br>Higher Secondary Education with 60%</li>
+                                <li><span>2014</span><br>Secondary Education with 61%</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Amit 2023. All Rights Reserved</p>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+</script> 
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0"
+
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px"
+        
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="/static/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Caveat&family=Kalam:wght@700&family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3e7e1fbcaa.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header1">
+    <div class="container">
+        <nav>
+            <img src="/static/images/image2.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="{% url 'home' %}">HOME</a></li>
+                <li><a href="{% url 'gallery' %}">GALLERY</a></li>
+                <li><a href="{% url 'about' %}">ABOUT ME</a></li>
+                <li><a href="{% url 'contact' %}">CONTACT</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <h1 class="new">Gallery</h1>
+    </div>
+    <div class="full-img" id="fullimgBox">
+        <img src="/static/new/image1.jpg" id="fullimg">
+        <span onclick="closefullimg()">X</span>
+    </div>
+        <div class="img-gallery">
+            <img src="/static/new/image1.jpg" onclick="openfullimg(this.src)">
+            <img src="/static/new/image2.jpg" onclick="openfullimg(this.src)">
+            <img src="/static/new/image3.jpg" onclick="openfullimg(this.src)">
+            <img src="/static/new/image4.jpg" onclick="openfullimg(this.src)">
+            <img src="/static/new/image5.jpg" onclick="openfullimg(this.src)">
+            <img src="/static/new/image6.jpg" onclick="openfullimg(this.src)">
+            <img src="/static/new/image7.jpg" onclick="openfullimg(this.src)">
+            <img src="/static/new/image8.jpg" onclick="openfullimg(this.src)">
+            <img src="/static/new/image9.jpg" onclick="openfullimg(this.src)">
+            <img src="/static/new/image10.jpg" onclick="openfullimg(this.src)">
+            <img src="/static/new/image11.jpg" onclick="openfullimg(this.src)">
+            <img src="/static/new/image12.jpg" onclick="openfullimg(this.src)">
+            
+        </div>
+        <div class="copyright">
+            <p>Copyright © Amit 2023. All Rights Reserved</p>
+        </div>
+<script>
+
+    var fullimgBox = document.getElementById("fullimgBox");
+    var fullimg = document.getElementById("fullimg");
+
+    function openfullimg(pic){
+        fullimgBox.style.display = "flex";
+        fullimg.src = pic;
+    }
+    function closefullimg(){
+        fullimgBox.style.display = "none";
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0"
+
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px"
+        
+    }
+
+</script>
+
+</body>
+</html>
